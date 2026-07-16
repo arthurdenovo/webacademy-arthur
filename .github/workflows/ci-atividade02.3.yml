@@ -1,0 +1,22 @@
+name: Segundo Workflow
+
+on:
+  push:
+
+jobs:
+    segundo-job:
+        runs-on: ubuntu-latest
+        env:
+          CURSO: "Integração Contínua"
+        steps:
+            - run: echo "Segundo passo"
+            - name: checkout
+              uses: actions/checkout@v5
+            - name: Lista arquivos
+              run: ls ${{ github.workspace }}
+            - name: Modificações com Curso
+              run: |
+                echo "Curso $CURSO"
+                echo "Usuário ${{ github.event.pusher.name }}"
+                echo "Repositório ${{ github.event.repository.name }}"
+                echo "Branch ${{ github.event.ref }}"
