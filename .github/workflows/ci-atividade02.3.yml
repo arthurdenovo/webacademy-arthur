@@ -1,4 +1,4 @@
-name: Segundo Workflow
+name: Terceiro Workflow
 
 on:
   push:
@@ -9,7 +9,7 @@ jobs:
         env:
           CURSO: "Integração Contínua"
         steps:
-            - run: echo "Segundo passo"
+            - run: echo "Terceiro passo"
             - name: checkout
               uses: actions/checkout@v5
             - name: Lista arquivos
