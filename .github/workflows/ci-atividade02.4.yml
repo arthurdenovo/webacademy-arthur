@@ -10,10 +10,12 @@ jobs:
             - run: echo "Primeiro passo"
             - name: checkout
               uses: actions/checkout@v5
-            - name: Lista arquivos
-              run: ls ${{ github.workspace }}
-            - name: Verificando se existem
+            - name: Verificando se existe README.md
               run: 
-                echo "README.md {{ github.workspace }}/README.md"
-                echo "LICENSE {{ github.workspace }}/LICENSE"
-                echo ".gitignore {{ github.workspace }}/.gitignore"
+                test -f README.md
+            - name: Verificando se existe LICENSE
+              run: 
+                test -f LICENSE
+            - name: Verificando se existe .gitignore
+              run: 
+                test -f .gitignore
