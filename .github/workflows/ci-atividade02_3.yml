@@ -1,4 +1,4 @@
-name: Terceiro Workflow
+name: Atividade 02.3 - Utilizando variáveis
 
 on:
   push:

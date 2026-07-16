@@ -1,4 +1,4 @@
-name: Quinto Workflow
+name: Atividade 02.5 - Criando múltiplos Jobs
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: Segundo Workflow
+name: Atividade 02.2 – Acrescentando novas etapas ao workflow
 
 on:
   push:
@@ -8,7 +8,7 @@ jobs:
     segundo-job:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "Segundo passo"
+            - run: echo "Primeiro passo"
             - name: checkout
               uses: actions/checkout@v5
             - name: Lista arquivos

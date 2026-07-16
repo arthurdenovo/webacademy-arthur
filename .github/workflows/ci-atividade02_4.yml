@@ -1,4 +1,4 @@
-name: Quarto Workflow
+name: Atividade 02.4 - Validando o repositório
 
 on:
   push:
