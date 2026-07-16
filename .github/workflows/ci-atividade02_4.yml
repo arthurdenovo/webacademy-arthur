@@ -1,0 +1,21 @@
+name: Quarto Workflow
+
+on:
+  push:
+
+jobs:
+    quarto-job:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Primeiro passo"
+            - name: checkout
+              uses: actions/checkout@v5
+            - name: Verificando se existe README.md
+              run: 
+                test -f README.md
+            - name: Verificando se existe LICENSE
+              run: 
+                test -f LICENSE
+            - name: Verificando se existe .gitignore
+              run: 
+                test -f .gitignore
