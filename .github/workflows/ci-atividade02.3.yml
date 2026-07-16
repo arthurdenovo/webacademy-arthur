@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-    segundo-job:
+    terceiro-job:
         runs-on: ubuntu-latest
         env:
           CURSO: "Integração Contínua"
