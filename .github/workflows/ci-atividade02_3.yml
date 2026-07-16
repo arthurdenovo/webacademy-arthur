@@ -9,7 +9,7 @@ jobs:
         env:
           CURSO: "Integração Contínua"
         steps:
-            - run: echo "Terceiro passo"
+            - run: echo "Primeiro passo"
             - name: checkout
               uses: actions/checkout@v5
             - name: Lista arquivos
