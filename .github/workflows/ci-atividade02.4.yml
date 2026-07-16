@@ -1,0 +1,19 @@
+name: Quarto Workflow
+
+on:
+  push:
+
+jobs:
+    quarto-job:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Primeiro passo"
+            - name: checkout
+              uses: actions/checkout@v5
+            - name: Lista arquivos
+              run: ls ${{ github.workspace }}
+            - name: Verificando se existem
+              run: 
+                echo "README.md {{ github.workspace }}/README.md"
+                echo "LICENSE {{ github.workspace }}/LICENSE"
+                echo ".gitignore {{ github.workspace }}/.gitignore"
